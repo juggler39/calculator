@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url('font/digital-7.woff2') format('woff2'),
+        url('font/digital-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    background: #E5E5E5;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.frame {
+    position: relative;
+    width: 500px;
+    height: 640px;
+    background: #C4C4C4;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25), inset -4px 4px 20px rgba(71, 74, 79, 0.5);
+    border-radius: 30px;
+}
+
+.black-border {
+    position: absolute;
+    width: 500px;
+    height: 230px;
+    background: #000;
+    box-shadow: inset -4px 4px 10px #C2C8C8;
+    border-radius: 30px 30px 0 0;
+}
+
+.calculator-title {
+    display: inline-block;
+    margin: 15px 38px; 
+    width: 300px;
+    height: 31px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #C2C8C8;
+}
+
+.white-border {
+    position: absolute;
+    top: 68px;
+    left: 29px;
+    width: 442px;
+    height: 133px;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+
+.panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 14px;
+    left: 40px;
+    width: 362px;
+    height: 91px;
+    background: #8C8E8D;
+    box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.screen {
+    font-family: 'Digital-7', sans-serif;
+    font-size: 80px;
+    font-weight: 500;
+    padding: 10px;
+    color: #444;
+}
+
+.buttons {
+
+    position: absolute;
+    top: 276px;
+    left: 38px;
+    width: 423px;
+    height: 316px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 12px;
+ }
+
+.button {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 57px;
+    background: #757575;
+    box-shadow: 2px -2px 0 #000000;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #CACBCD;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px lightskyblue;
+}
+
+.top {
+    height: 40px;
+    font-size: 25px;
+}
+
+.red {
+    background: #AE3D4F;
+}
+
+.black {
+    background: #474A4F;
+}
+
+.plus {
+    height: 126px;
+    font-size: 60px;
+    grid-column: 4;
+    grid-row: 4 / span 5;
+}
+
