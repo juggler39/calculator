@@ -7,6 +7,16 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Segment7';
+    src: url('font/Segment7Standard.woff2') format('woff2'),
+        url('font/Segment7Standard.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
 body {
     box-sizing: border-box;
     display: flex;
@@ -57,24 +67,23 @@ body {
 }
 
 .panel {
+    box-sizing: border-box;
     position: absolute;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
     top: 14px;
     left: 40px;
     width: 362px;
     height: 91px;
+    padding: 15px 10px 0;
     background: #8C8E8D;
     box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 }
 
 .screen {
-    font-family: 'Digital-7', sans-serif;
-    font-size: 80px;
-    font-weight: 500;
-    padding: 10px;
+    font-family: 'Segment7', sans-serif;
+    font-size: 65px;
     color: #444;
 }
 
@@ -87,7 +96,7 @@ body {
     height: 316px;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-gap: 12px;
+    gap: 12px;
  }
 
 .button {
@@ -111,7 +120,6 @@ body {
 
 .button:active {
     transform: translateY(2px);
-    box-shadow: none;
 }
 
 .button:focus {
@@ -139,3 +147,13 @@ body {
     grid-row: 4 / span 5;
 }
 
+.active {
+    animation-name: click;
+    animation-duration: .15s;
+}
+
+@keyframes click {
+    0%   {transform: translateY(0);}
+    50%  {transform: translateY(2px);}
+    100% {transform: translateY(0);}
+  }

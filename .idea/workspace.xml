@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7127707e-aa83-4428-986b-c70043d7a1f6" name="Default Changelist" comment="" />
+    <list default="true" id="7127707e-aa83-4428-986b-c70043d7a1f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/transfonter.org-20200712-163119/Digital-7.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/transfonter.org-20200712-163119/Digital-7.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/transfonter.org-20200712-163119/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/font/transfonter.org-20200712-163119/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +19,11 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1elESLcvQEjmlaesKj1lDJjcxio" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../js-assignments" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -35,6 +46,7 @@
       <updated>1594887777666</updated>
       <workItem from="1594887779094" duration="1395000" />
       <workItem from="1594889277961" duration="65000" />
+      <workItem from="1594913992583" duration="20000" />
     </task>
     <servers />
   </component>
@@ -42,9 +54,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1594889283183">
+    <state x="690" y="217" key="FileChooserDialogImpl" timestamp="1594914017898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594889283183" />
+    <state x="690" y="217" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594914017898" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1594913992486">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594913992486" />
   </component>
 </project>
