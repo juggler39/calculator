@@ -1,30 +1,37 @@
 let c = {};
 
-c.input = '';
+c.input = '0';
 c.screen = '0';
 c.operator = '';
-c.firstNumber = '';
-c.resultFlag = false;
+c.firstNumber = '0';
+c.editable = true;
 c.maxLength = 8;
 
+c.add = (a, b) => a + b;
+c.substract = (a, b) => a - b;
+c.multiply = (a, b) => a * b;
+c.divide = (a, b) => a / b;
+
 c.inputDigit = (digit) => {
-    if (c.resultFlag) {
-        c.resultFlag = false;
-        c.input = '';
+    if (!c.editable) {
+        c.editable = true;
+        c.input = '0';
     }
     if (c.input.replace(/\./, '').length < c.maxLength) {
-        if (!(digit ==='0' && c.input === '')) {
-            c.input = c.input + digit;
-            c.screen = c.input;
+        if (c.input === '0') {
+            if (digit !== '0') {
+                c.input = digit;
+            }
         } else {
-            c.input = '0';
+            c.input += digit;
         }
+        c.screen = c.input;
     }
 }
 
 c.inputPoint = () => {
-    c.resultFlag = false;
-    if (c.input ==='') {
+    c.editable = true;
+    if (c.input ==='0') {
         c.input = '0.';
     } else if (c.input.indexOf('.') === -1) {
         c.input += '.';
@@ -33,10 +40,10 @@ c.inputPoint = () => {
 }
 
 c.inputOperator = (operator) => {
+    if (c.firstNumber != '0') c.equals();
     c.operator = operator;
-    if (c.firstNumber) c.equals();
     c.firstNumber = c.input;
-    c.input = '';
+    c.input = '0';
 }
 
 c.operate =  (a, b, op) => {
@@ -45,37 +52,49 @@ c.operate =  (a, b, op) => {
         case '-': return c.substract (a,b);
         case '*': return c.multiply (a, b);
         case '/': return c.divide (a, b);
+        default: return 0;
     }
 }
 
-c.add = (a, b) => a + b;
-c.substract = (a, b) => a - b;
-c.multiply = (a, b) => a * b;
-c.divide = (a, b) => a / b;
-
 c.equals = () => {
     c.screen =  c.operate (+c.firstNumber, +c.input, c.operator);
-    c.firstNumber = ''
+    c.firstNumber = '0'
     c.input = '' + c.screen;
-    c.resultFlag = true;
+    c.editable = false;
 }
 
 c.inputAction = (action) => {
     switch(action) {
         case 'Enter':
             c.equals();
+            break;
+        case '%':
+            c.input = +c.input*c.firstNumber/100;
+            c.equals();
+            break;
+        case '+/-': 
+            c.input = '' + (0 - c.input);
+            c.screen = c.input;
+            break;
+        case 'Backspace':
+            if (c.editable) c.input = c.input.slice(0, -1);
+            c.screen = c.input;
+            break;
     }
 }
 
 c.updateDisplay = () => {
-    if (c.resultFlag) {
-       c.screen = '' + Number(c.screen).toPrecision(c.maxLength);
-       return c.screen.replace(/(\.\d*?)0+$/, "$1");
-    } else {
+    if (c.editable) {
+
         if (c.screen.toString().indexOf('.') === -1) {
             return c.screen + '.';
         } else {
             return c.screen;
         }
+
+    } else {
+        c.screen = '' + Number(c.screen).toPrecision(c.maxLength);
+        return c.screen.replace(/(\.\d*?)0+$/, "$1");
+
     }
 }
