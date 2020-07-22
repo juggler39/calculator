@@ -1,0 +1,25 @@
+{
+    "name": "Calculator",
+    "short_name": "Calculator",
+    "lang": "ru-RU",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#E5E5E5",
+    "icons": [
+    {
+        "src": "img/calculator32.png",
+        "sizes": "32x32"
+        },
+      {
+        "src": "img/calculator192.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/calculator512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "background_color": "#E5E5E5"
+  }
