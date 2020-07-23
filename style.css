@@ -80,8 +80,26 @@ body {
 }
 
 .screen {
-    font-family: 'Segment7', sans-serif;
+    font-family: Segment7, sans-serif;
     font-size: 65px;
+    color: #272727;
+}
+
+.memory {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-family: Digital-7, sans-serif;
+    font-size: 33px;
+    color: #272727;
+}
+
+.error {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    font-family: Segment7, sans-serif;
+    font-size: 30px;
     color: #272727;
 }
 
