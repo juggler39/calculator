@@ -32,7 +32,7 @@ function parseKey(e) {
         button.onanimationend = () => {
             button.classList.remove("active");
           };
-        button.click();
+        if (button.id != 'Enter') button.click();
     }
 }
 
