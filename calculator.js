@@ -145,7 +145,7 @@ c.inputAction = (action) => {
             c.memory = c.memory - c.input;
             break;
         case 'MRC':
-            if (c.previous === 'MRC') {
+            if (c.previousKey === 'MRC') {
                 c.memory = 0;
             } else {
                 c.editable = false;
