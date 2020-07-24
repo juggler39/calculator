@@ -28,7 +28,7 @@ c.operate =  (a, b, op) => {
 c.equals = () => {
     c.screen =  c.operate (+c.firstNumber, +c.input, c.operator);
     c.firstNumber = '0'
-    c.input = '' + c.screen;
+    c.input = c.screen;
     c.editable = false;
 }
 
@@ -153,9 +153,12 @@ c.inputAction = (action) => {
             }
             break;
         case 'CE':
-            c.error = false;
-            c.input = '0';
-            c.screen = c.input;
+            if (c.error) {
+                c.error = false;
+            } else {
+                c.input = '0';
+                c.screen = c.input;
+            }
             break;
         case 'ON/C':
             c.error = false;

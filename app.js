@@ -4,6 +4,9 @@ const screen = document.querySelector('.screen');
 const memory = document.querySelector('.memory');
 const error = document.querySelector('.error');
 
+memory.innerHTML = '';
+error.innerHTML = '';
+
 buttons.forEach(button => button.addEventListener('click', function(e) {
     if (button.classList.contains('number')) {
         c.inputDigit(button.id);
