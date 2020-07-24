@@ -22,12 +22,13 @@ c.operate =  (a, b, op) => {
         case '-': return c.substract (a,b);
         case '*': return c.multiply (a, b);
         case '/': return c.divide (a, b);
+        default: return 0;
     }
 }
 
 c.equals = () => {
     c.screen =  c.operate (+c.firstNumber, +c.input, c.operator);
-    c.firstNumber = '0'
+    c.firstNumber = '0';
     c.input = c.screen;
     c.editable = false;
 }
